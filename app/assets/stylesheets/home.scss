@@ -1,4 +1,5 @@
-#main {
+
+  #main {
     height: 100vh;
     background-color: bisque;
     overflow: auto;
@@ -27,48 +28,85 @@
         display: flex;
         flex-direction: column;
   
-            p {
-                display: inline-block;
-                padding: 10px;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                margin-bottom: 5px;
-                margin-top: 5px;
-                max-width: 70%;
-                width: max-content;
+        p {
+          display: inline-block;
+          padding: 10px;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          margin-bottom: 5px;
+          margin-top: 5px;
+          max-width: 70%;
+          width: max-content;
   
-                &.received {
-                    background-color: chocolate;
-                    border-bottom-right-radius: 10px;
-                }
+          &.received {
+            background-color: chocolate;
+            border-bottom-right-radius: 10px;
+          }
   
-                &.sent {
-                    border-bottom-left-radius: 10px;
-                    background-color: darkred;
-                    align-self: flex-end;
-                }
-            }
+          &.sent {
+            border-bottom-left-radius: 10px;
+            background-color: darkred;
+            align-self: flex-end;
+          }
         }
+      }
   
       form#send_message {
         width: 95%;
         margin: auto;
   
-            input {
-            height: 30px;
-            width: 90%;
-            border-radius: 10px;
-            border: 0;
-            }
+        input {
+          height: 30px;
+          width: 90%;
+          border-radius: 10px;
+          border: 0;
+        }
   
-            button {
+        button {
+          height: 35px;
+          width: 8.8%;
+          border-radius: 20px;
+          border: 0;
+          background-color: tomato;
+          color: white;
+        }
+      }
+    }
+    div#modal {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        background-color: #000000bf;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        display: none;
+    
+        >div {
+          width: 300px;
+          background: white;
+          margin: auto;
+          padding: 30px;
+          text-align: center;
+          height: 150px;
+          border-radius: 10px;
+    
+          input {
+            height: 30px;
+            border-radius: 10px;
+            border: 2px dotted rebeccapurple;
+            width: 100%;
+            margin-bottom: 10px;
+          }
+    
+          button {
             height: 35px;
-            width: 8.8%;
             border-radius: 20px;
             border: 0;
-            background-color: tomato;
-                color: white;
-            }         
+            background-color: #673AB7;
+            color: white;
+            width: 80px;
+          }
         }
-    }
-}
+      }
+  }
